@@ -1,0 +1,264 @@
+/* Global */
+
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/oswaldregular.woff2") format("woff2"), url("../fonts/oswaldregular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/oswaldmedium.woff2") format("woff2"), url("../fonts/oswaldmedium.woff") format("woff");
+  font-display: swap;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background-color: beige;
+}
+
+p {
+  margin: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.page {
+  height: 100%;
+  /* max-width: 1440px; */
+  margin: 0 auto;
+}
+
+.page__body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-weight: 400;
+  /* background-color:#e6e1e5; */
+  background-color: #9E9B98;
+  margin: 0 auto;
+  padding: 0;
+  flex-grow: 1;
+}
+
+/*buttons*/
+
+.button {
+  background-color: #756157;
+  display: inline-block;
+  font-family: inherit;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #615048;
+}
+
+.button:active {
+  background-color: #756157;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button:disabled {
+  background-color: #e5e5e5;
+  color: #ffffff;
+}
+
+.header {
+  background-color: #BACBDB;
+}
+
+.header-wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20px;
+  padding: 20px;
+}
+
+.header-name {
+  font-size:40px;
+  line-height: 52px;
+}
+
+.main-index {
+  display: flex;
+  justify-content: center;
+}
+
+.main-container {
+  width: 1200px;
+  background-color: #f4f0f0;
+  min-height: 100vh;
+}
+
+.about-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  align-items: center;
+  text-align: center;
+  background-color: #f4f0f0;
+
+  p {
+    font-size: 20px;
+    line-height: 36px;
+    width: 450px;
+  }
+
+  h2 { 
+    margin: 0;
+    font-size: 20px;
+    line-height: 36px;
+    width: 300px;
+    padding-bottom: 20px;
+  }
+}
+
+.calc-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  align-items: center;
+  text-align: center;
+  background-color: #e6e1e5;
+
+  p {
+    font-size: 20px;
+    line-height: 36px;
+    /* width: 450px; */
+    margin-bottom: 20px;
+  }
+
+  h2 { 
+    margin: 0;
+    font-size: 20px;
+    line-height: 36px;
+    width: 300px;
+    padding-bottom: 20px;
+  }
+}
+
+.form__field-group {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.form__field {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.form__label {
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-left: 16px;
+}
+
+.form__field-input {
+
+  /* font-family: ;
+  font-size: ;
+  line-height: ; */
+  text-transform: uppercase;
+  /* color: ; */
+  padding: 13px 25px 14px 12px;
+  border: 1px solid gray;
+  appearance: textfield;
+  box-sizing: border-box;
+
+  ::-webkit-outer-spin-button,
+  ::-webkit-inner-spin-button {
+    appearance: none;
+  }
+
+  ::placeholder {
+    /* font-family:;
+    line-height: ; */
+    text-transform: uppercase;
+    /* color: ; */
+    font-size: 16px;
+  }
+
+
+  :hover {
+    border: 1px solid gold;
+  }
+
+  :focus {
+    border: 1px solid grey;
+    outline: 1px solid grey;
+  }
+}
+
+.form__field-buttons {
+  display: flex;
+  flex-direction: column;
+
+  input {
+    background-color: #e6e1e5;
+  }
+
+  button {
+    margin-top: 30px;
+    margin-left: 0;
+    padding: 10px;
+    background-color: #CEAD6D;
+  }
+}
+
+[type="number"] {
+  appearance: textfield;
+
+  ::-webkit-outer-spin-button,
+  ::-webkit-inner-spin-button {
+    appearance: none;
+  }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="page" lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ligand App</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon.png') }}">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}" />
+        <!-- <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
+        <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous"> -->
+    </head>
+    <body class="page__body">
+        <header class="header">
+            <div class="header-wrapper">
+                <p class="header-name">Energizer</p>
+            </div>
+        </header>
+        <!--Информация о проекте -->
+        <main class="main-index">
+            <div class="main-container">
+                <section class="about-us">
+                    <h2 class="about-us-title">Информация о проекте</h2>
+                    <p class="about-us-description">Наш проект блаблаблаблабла</p>
+                </section>
+                <section class="calc-block">
+                    <h2 class="calc-block-title"> Расчетный блок</h2>
+                    <form ref="form" v-model="valid" enctype="multipart/form-data" lazy-validation>
+                        <fieldset class="form__field-group">
+                            <div class="form__field-wrapper">
+                                <p class="form__field">
+                                    <input class="form__field-input form__field-input--important" type="number" id="model-num" name="model-num" placeholder="20" min="0"
+                                    required>
+                                  <label class="form__label" for="cat-name">Укажите количество моделей</label>
+                                </p>
+                                <p class="form__field">
+                                    <input class="form__field-input form__field-input--important" type="number" id="distance" name="distance" placeholder="1.75"
+                                    required>
+                                  <label class="form__label" for="cat-weight">То число которое как то надо назвать</label>
+                                </p>
+                                <div class="form__field-buttons">
+                                    <!-- <input class="form__field-input form__button form__field-input--important" id="file" ref="file" type="file" accept=".pdb"> -->
+                                    <button class="form__label form__button" type="submit" >Запустить</button>
+                                </div>
+                        </fieldset>
+                    </form>
+                </section>
+            </div>
+        </main>
+    </body>
+</html>
