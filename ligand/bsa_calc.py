@@ -287,7 +287,7 @@ class Bsa():
         # np.int = np.int_ can fix problem with numpy
         parser = PDB.PDBParser()
         # Путь к файлу 
-        structure_name = ".\Cyclodextrine_ligand_names_good.pdb"
+        structure_name = f"{self.dir_calc_model}/Cyclodextrine_ligand_names_good.pdb"
         structure = parser.get_structure(structure_name, structure_name)
         chains_com = self.coord_lig_atoms(structure, self.id_separator(structure)[0])
         chains_ids = self.id_separator(structure)

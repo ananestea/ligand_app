@@ -18,13 +18,15 @@
         <!--Информация о проекте -->
         <main class="main-index">
             <div class="main-container">
+
                 <section class="about-us">
                     <h2 class="about-us-title">Информация о проекте</h2>
                     <p class="about-us-description">Наш проект блаблаблаблабла</p>
                 </section>
+
                 <section class="calc-block">
                     <h2 class="calc-block-title"> Расчетный блок</h2>
-                    <form ref="form" v-model="valid" enctype="multipart/form-data" lazy-validation>
+                    <form ref="form" v-model="valid" enctype="multipart/form-data" lazy-validation action="/calc-ligand" method="POST">
                         <fieldset class="form__field-group">
                             <div class="form__field-wrapper">
                                 <p class="form__field">
@@ -33,14 +35,29 @@
                                   <label class="form__label" for="cat-name">Укажите количество моделей</label>
                                 </p>
                                 <p class="form__field">
-                                    <input class="form__field-input form__field-input--important" type="number" id="distance" name="distance" placeholder="1.75"
+                                    <input class="form__field-input form__field-input--important" type="number" step="0.01" id="distance" name="distance" placeholder="1.75"
                                     required>
                                   <label class="form__label" for="cat-weight">То число которое как то надо назвать</label>
                                 </p>
                                 <div class="form__field-buttons">
-                                    <!-- <input class="form__field-input form__button form__field-input--important" id="file" ref="file" type="file" accept=".pdb"> -->
-                                    <button class="form__label form__button" type="submit" >Запустить</button>
+                                    <input class="form__field-input form__button form__field-input--important" id="file" ref="file" type="file" name="file" accept=".pdb">
+                                    <input class="form__label form__button" type="submit" ></input>
                                 </div>
+                        </fieldset>
+                    </form>
+                </section>
+
+                <section class="calc-block">
+                    <h2 class="calc-block-title"> Скачайте свои расчеты</h2>
+                    <form ref="form" v-model="valid" enctype="multipart/form-data" lazy-validation action="/find-your-ligand" method="POST">
+                        <fieldset class="form__field-group">
+                            <div class="form__field-wrapper">
+                                <p class="form__field">
+                                    <input class="form__field-input form__field-input--important" type="text" id="ligand-id" name="ligand-id" placeholder="Введите id"
+                                    required>
+                                  <label class="form__label" for="cat-name">Введите ligand-id, которое вы должны были сохранить при старте расчета</label>
+                                </p>
+                                <input class="form__label form__button" type="submit" ></input>
                         </fieldset>
                     </form>
                 </section>
