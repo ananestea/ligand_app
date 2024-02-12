@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, send_file
 from ligand.bsa_calc import Bsa
 import uuid
 import os
@@ -42,9 +42,9 @@ def calc_ligand_func(model_num, distance, dir_calc_model, id):
     # Запустим расчет 
     model.main(model_num, distance, dir_calc_model)
     # Сохраним результаты в zip файле в отдельной папке
-    save_zip(f"./ligand_zip/ligand_{id}.zip", [f'./ligand/{id}'], "w")
+    save_zip(f"./ligand_zip/ligand_{id}.zip", [f'./ligand/current/{id}'], "w")
     # Удалим папку
-    shutil.rmtree(f'./ligand/{id}')
+    shutil.rmtree(f'./ligand/current/{id}')
 
 
 
@@ -52,7 +52,7 @@ def calc_ligand_func(model_num, distance, dir_calc_model, id):
 def calc_ligand():
     # Сгенерим папку с уникальным id для расчета
     id = uuid.uuid4()
-    dir_calc_model = f'./ligand/{id}'
+    dir_calc_model = f'./ligand/current/{id}'
     try:
         path = os.path.join(dir_calc_model)
         os.mkdir(path)
@@ -74,7 +74,8 @@ def find_your_ligand():
     id = request.form['ligand-id']
     try:
         # Выполним поиск папки
-       return "True"
+       file = f'./ligand_zip/ligand_{id}.zip'
+       return send_file(file, as_attachment=True)
     except: 
         return "Не найден такой id"
     
