@@ -1,18 +1,26 @@
 /* Global */
 
 @font-face {
-  font-family: "Oswald";
+  font-family: "Raleway";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/oswaldregular.woff2") format("woff2"), url("../fonts/oswaldregular.woff") format("woff");
+  src: url("../fonts/ralewayregular.woff2") format("woff2"), url("../fonts/ralewayregular.woff") format("woff");
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Oswald";
+  font-family: "Raleway";
   font-style: normal;
   font-weight: 500;
-  src: url("../fonts/oswaldmedium.woff2") format("woff2"), url("../fonts/oswaldmedium.woff") format("woff");
+  src: url("../fonts/ralewaymedium.woff2") format("woff2"), url("../fonts/ralewaymedium.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ralewaybold.woff2") format("woff2"), url("../fonts/ralewaybold.woff") format("woff");
   font-display: swap;
 }
 
@@ -24,18 +32,18 @@ img {
 
 html {
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: "Raleway", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: black;
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  background-color: beige;
 }
 
 p {
@@ -66,8 +74,6 @@ p {
   flex-direction: column;
   min-height: 100%;
   font-weight: 400;
-  /* background-color:#e6e1e5; */
-  background-color: #9E9B98;
   margin: 0 auto;
   padding: 0;
   flex-grow: 1;
@@ -106,7 +112,31 @@ p {
 }
 
 .header {
-  background-color: #BACBDB;
+  background-color: #ffffff;
+}
+
+.header-logo {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  p {
+    color: #615048;
+    font-size:40px;
+    line-height: 52px;
+  }
+}
+
+.header-nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  ul {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+  }
 }
 
 .header-wrapper {
@@ -117,6 +147,8 @@ p {
   justify-content: center;
   padding-left: 20px;
   padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .header-name {
@@ -130,7 +162,7 @@ p {
 }
 
 .main-container {
-  width: 1200px;
+  width: 100%;
   background-color: #f4f0f0;
   min-height: 100vh;
 }
@@ -142,14 +174,15 @@ p {
   padding: 20px;
   align-items: center;
   text-align: center;
-  background-color: #f4f0f0;
+  background-color: rgb(236 242 244);
+  background-image: linear-gradient(#ffffff 5%, rgb(234 239 243) 95%);
 
   p {
     font-size: 20px;
     line-height: 36px;
     width: 450px;
   }
-
+  
   h2 { 
     margin: 0;
     font-size: 20px;
@@ -157,8 +190,67 @@ p {
     width: 300px;
     padding-bottom: 20px;
   }
+};
+
+p {
+  font-size: 20px;
+  line-height: 36px;
+  width: 450px;
+  color: rgb(141 145 147);
 }
 
+h2 { 
+  margin: 0;
+  font-size: 20px;
+  line-height: 36px;
+  width: 300px;
+  padding-bottom: 20px;
+  color: rgb(112 120 59);;
+}
+
+.instructions {
+  background-color: rgb(255 255 251);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  align-items: center;
+
+  p {
+    font-size: 20px;
+    line-height: 36px;
+    width: 450px;
+    color: rgb(165 162 154);
+  }
+  
+  h2 { 
+    margin: 0;
+    font-size: 20px;
+    line-height: 36px;
+    width: 300px;
+    padding-bottom: 20px;
+    color: rgb(85 87 90);
+  }
+
+  ol {
+    color: rgb(157 162 119);
+    text-decoration: none;
+    list-style: none;
+    counter-reset: item;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    display: block;
+  }
+
+  li:before {
+    content: counter(item) "  "; 
+    counter-increment: item;
+  }
+}
 .calc-block {
   display: flex;
   flex-direction: column;

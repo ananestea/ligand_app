@@ -12,7 +12,16 @@
     <body class="page__body">
         <header class="header">
             <div class="header-wrapper">
-                <p class="header-name">Energizer</p>
+                <nav class="header-nav">
+                    <a class="header-logo" href="#">
+                        <img src="/static/images/logo.svg" width="70" height="38">
+                        <p>LIGandApp</p>
+                    </a>
+                    <ul class="">
+                        <li class="">Git</li>
+                        <li class="">Gmail</li>
+                    </ul>
+                </nav>
             </div>
         </header>
         <!--Информация о проекте -->
@@ -22,9 +31,20 @@
                 <section class="about-us">
                     <h2 class="about-us-title">Информация о проекте</h2>
                     <p class="about-us-description">Наш проект блаблаблаблабла</p>
+                    <a class="about-us-button" href="#instructons">Инструкция</a>
+                    <a class="about-us-button" href="#calc-block">Рассчеты</a>
+                </section>
+                <section class="instructions" id="instructions">
+                    <h2 class="instructions-title">Информация о проекте</h2>
+                    <p class="instructions-description">Наш проект блаблаблаблабла</p>
+                    <ol>
+                        <li>так</li>
+                        <li>сяк</li>
+                        <li>об косяк</li>
+                    </ol>
                 </section>
 
-                <section class="calc-block">
+                <section class="calc-block" id="calc-block">
                     <h2 class="calc-block-title"> Расчетный блок</h2>
                     <form ref="form" v-model="valid" enctype="multipart/form-data" lazy-validation action="/calc-ligand" method="POST">
                         <fieldset class="form__field-group">
@@ -63,5 +83,17 @@
                 </section>
             </div>
         </main>
+        <footer class="footer">
+            <div class="footer-wrapper">
+                <ul class="contacts-list">
+                    <li class="contacts-item">
+                        <a class="contacts-link"></a>
+                    </li>
+                    <li class="contacts-item">
+                        <a class="contacts-link"></a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
     </body>
 </html>
