@@ -29,45 +29,76 @@
             <div class="main-container">
 
                 <section class="about-us">
-                    <h2 class="about-us-title">Информация о проекте</h2>
-                    <p class="about-us-description">Наш проект блаблаблаблабла</p>
-                    <a class="about-us-button" href="#instructons">Инструкция</a>
-                    <a class="about-us-button" href="#calc-block">Рассчеты</a>
+                    <div class="wrapper">
+                        <div class="about-us-text">
+                            <h2 class="about-us-title">LIGandApp</h2>
+                            <p class="about-us-description">Наш проект LIGandApp это блаблаблаблаблабла блаблаблаблаблаблаблаб лаблаблаблаблаблаблаблаблаблаблаблаблаблаблабл аблаблаблаблаблаблаблаблаблаблаблаблаблаблаблаблаблаблаблаблаблабла</p>
+                            <div class="about-us-buttons">
+                                <a class="about-us-button" href="#instructons">Инструкция</a>
+                                <a class="about-us-button" href="#calc-block">Рассчеты</a>
+                            </div>
+                        </div>
+                    </div>
                 </section>
                 <section class="instructions" id="instructions">
-                    <h2 class="instructions-title">Информация о проекте</h2>
-                    <p class="instructions-description">Наш проект блаблаблаблабла</p>
-                    <ol>
-                        <li>так</li>
-                        <li>сяк</li>
-                        <li>об косяк</li>
-                    </ol>
+                    <div class="wrapper">
+                        <div class="instructions-content">
+                            <h2 class="instructions-title">Инструкция</h2>
+                            <p class="instructions-description">Наш проект блаблаблаблабла</p>
+                            <ol>
+                                <li>так</li>
+                                <li>сяк</li>
+                                <li>об косяк</li>
+                                <li>открой то</li>
+                                <li>сделай сё</li>
+                                <li>туда</li>
+                                <li>сюда</li>
+                                <li>миллионер</li>
+                            </ol>
+                        </div>
+                    </div>
+                    
                 </section>
 
                 <section class="calc-block" id="calc-block">
-                    <h2 class="calc-block-title"> Расчетный блок</h2>
-                    <form ref="form" v-model="valid" enctype="multipart/form-data" lazy-validation action="/calc-ligand" method="POST">
+                    <div class="wrapper">
+                        <h2 class="calc-block-title"> Расчетный блок</h2>
+                        <form ref="form" v-model="valid" enctype="multipart/form-data" lazy-validation action="/calc-ligand" method="POST">
+                            <fieldset class="form__field-group">
+                                <div class="form__field-wrapper">
+                                    <p class="form__field">
+                                        <input class="form__field-input form__field-input--important" type="number" id="model-num" name="model-num" placeholder="20" min="0"
+                                        required>
+                                      <label class="form__label" for="cat-name">Укажите количество моделей</label>
+                                    </p>
+                                    <p class="form__field">
+                                        <input class="form__field-input form__field-input--important" type="number" step="0.01" id="distance" name="distance" placeholder="1.75"
+                                        required>
+                                      <label class="form__label" for="cat-weight">То число которое как то надо назвать</label>
+                                    </p>
+                                    <div class="form__field-buttons">
+                                        <input class="form__field-input form__button form__field-input--important" id="file" ref="file" type="file" name="file" accept=".pdb">
+                                        <input class="form__label form__button" type="submit" ></input>
+                                    </div>
+                            </fieldset>
+                        </form>
+                        <h3 class="calc-block-title"> Скачайте свои расчеты</h2>
+                    <form ref="form" v-model="valid" enctype="multipart/form-data" lazy-validation action="/find-your-ligand" method="POST">
                         <fieldset class="form__field-group">
                             <div class="form__field-wrapper">
                                 <p class="form__field">
-                                    <input class="form__field-input form__field-input--important" type="number" id="model-num" name="model-num" placeholder="20" min="0"
+                                    <input class="form__field-input form__field-input--important" type="text" id="ligand-id" name="ligand-id" placeholder="Введите id"
                                     required>
-                                  <label class="form__label" for="cat-name">Укажите количество моделей</label>
+                                  <label class="form__label" for="cat-name">Введите ligand-id, которое вы должны были сохранить при старте расчета</label>
                                 </p>
-                                <p class="form__field">
-                                    <input class="form__field-input form__field-input--important" type="number" step="0.01" id="distance" name="distance" placeholder="1.75"
-                                    required>
-                                  <label class="form__label" for="cat-weight">То число которое как то надо назвать</label>
-                                </p>
-                                <div class="form__field-buttons">
-                                    <input class="form__field-input form__button form__field-input--important" id="file" ref="file" type="file" name="file" accept=".pdb">
-                                    <input class="form__label form__button" type="submit" ></input>
-                                </div>
+                                <input class="form__label form__button" type="submit" ></input>
                         </fieldset>
                     </form>
+                    </div>
+                    
                 </section>
 
-                <section class="calc-block">
+                <!-- <section class="calc-block-answer">
                     <h2 class="calc-block-title"> Скачайте свои расчеты</h2>
                     <form ref="form" v-model="valid" enctype="multipart/form-data" lazy-validation action="/find-your-ligand" method="POST">
                         <fieldset class="form__field-group">
@@ -80,7 +111,7 @@
                                 <input class="form__label form__button" type="submit" ></input>
                         </fieldset>
                     </form>
-                </section>
+                </section> -->
             </div>
         </main>
         <footer class="footer">
