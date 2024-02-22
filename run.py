@@ -57,7 +57,7 @@ def calc_ligand():
         path = os.path.join(dir_calc_model)
         os.mkdir(path)
     except:
-        print("бля вернкть 500 ошибка")
+        print("вернуть 500 ошибка")
     # Переименнуем pdb файл и сохраним его в уникальную папку
     model_num = int(request.form['model-num'])
     distance = float(request.form['distance'])

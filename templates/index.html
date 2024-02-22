@@ -32,7 +32,7 @@
                     <div class="wrapper">
                         <div class="about-us-text">
                             <h2 class="about-us-title">LIGandApp</h2>
-                            <p class="about-us-description">Наш проект LIGandApp это блаблаблаблаблабла блаблаблаблаблаблаблаб лаблаблаблаблаблаблаблаблаблаблаблаблаблаблабл аблаблаблаблаблаблаблаблаблаблаблаблаблаблаблаблаблаблаблаблаблабла</p>
+                            <p class="about-us-description">Данный веб-сервис позволяет рассчитать процесс релиза лигандов из циклодекстринов, а также рассчитать энергию их взаимодействия на разных стадиях релиза</p>
                             <div class="about-us-buttons">
                                 <a class="about-us-button" href="#instructons">Инструкция</a>
                                 <a class="about-us-button" href="#calc-block">Рассчеты</a>
@@ -44,16 +44,16 @@
                     <div class="wrapper">
                         <div class="instructions-content">
                             <h2 class="instructions-title">Инструкция</h2>
-                            <p class="instructions-description">Наш проект блаблаблаблабла</p>
+                            <!-- <p class="instructions-description">Наш проект блаблаблаблабла</p> -->
                             <ol>
-                                <li>так</li>
-                                <li>сяк</li>
-                                <li>об косяк</li>
-                                <li>открой то</li>
-                                <li>сделай сё</li>
-                                <li>туда</li>
-                                <li>сюда</li>
-                                <li>миллионер</li>
+                                <li>Загружаемый PDB-файл должен содержать циклодекстрин и лиганд с отличными друг от друга id</li>
+                                <li>Укажите количество структур, которое вы хотите получить в результате рассчета (каждая структура отстает на один ангстрем)</li>
+                                <li>Укажите минимальный дозволительный отступ циклодекстрина от лиганда</li>
+                                <li>Загрузите ваш PDB-файл и нажмите кнопку submit</li>
+                                <li>Дождитесь окончания рассчета</li>
+                                <li>По окнчанию рассчета вы получите уникальный id</li>
+                                <li>Вставьте id в окно "Введите лиганд-id" и нажмите кнопку submit</li>
+                                <li>Архив с результатом ваших рассчетов будет загружен к Вам на устройство</li>
                             </ol>
                         </div>
                     </div>
@@ -74,7 +74,7 @@
                                     <p class="form__field">
                                         <input class="form__field-input form__field-input--important" type="number" step="0.01" id="distance" name="distance" placeholder="1.75"
                                         required>
-                                      <label class="form__label" for="cat-weight">То число которое как то надо назвать</label>
+                                      <label class="form__label" for="cat-weight">укажите дозволительный отступ циклодекстрина от лиганда</label>
                                     </p>
                                     <div class="form__field-buttons">
                                         <input class="form__field-input form__button form__field-input--important" id="file" ref="file" type="file" name="file" accept=".pdb">
@@ -89,7 +89,7 @@
                                 <p class="form__field">
                                     <input class="form__field-input form__field-input--important" type="text" id="ligand-id" name="ligand-id" placeholder="Введите id"
                                     required>
-                                  <label class="form__label" for="cat-name">Введите ligand-id, которое вы должны были сохранить при старте расчета</label>
+                                  <label class="form__label" for="cat-name">Введите ligand-id, которое вы должны были сохранить в конце расчета</label>
                                 </p>
                                 <input class="form__label form__button" type="submit" ></input>
                         </fieldset>
