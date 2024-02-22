@@ -198,12 +198,12 @@ p {
 .about-us::after {
   position: absolute;
   content: "";
-  width: 850px;
-  height: 500px;
+  width: 384px;
+  height: 316px;
   background-image:
-    url("/static/images/CDX_LIGAND.png");
-  top: -67px;
-  right: 0;
+    url("/static/images/cdx-lig.png");
+  top: 6px;
+  right: 90px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
